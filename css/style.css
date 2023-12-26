@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*Menú*/
+.navbar {
+  background-color: var(--color_principal);
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+.navbar .nav-item {
+  margin-left: 6rem;
+}
+
+.navbar-brand img {
+  width: 10%;
+}
+
+/*Carousel main*/
+
+.carousel-inner .carousel-item {
+  height: 50vh;
+}
+
+.carousel-inner .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  /* filter: grayscale(0.8); */
+}
+
+/*Sección vehículos: Cards*/
+
+.seccion_vehiculos--titulo {
+  font-size: 3rem;
+}
+
+.seccion_vehiculos--titulo_card {
+  font-size: 2.5rem;
+}
+
+.seccion_vehiculos--parrafo_card {
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+
+section .card-principal {
+  height: 42rem;
+  box-shadow: 13px 6px 15px 3px rgba(4, 20, 76, 0.41);
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+section .card img {
+  object-fit: cover;
+}
+
+section .card .btn-card {
+  font-size: 1.8rem;
+  border-radius: 5rem;
+  background-color: var(--color_principal);
+  border: none;
+  padding: 1rem;
+  width: 20rem;
+}
+
+/*Seccion vehículos: Video */
+.seccion_video {
+  width: 90%;
+  height: auto;
+}
+
+/* Seccion Logros */
+
+.card-servicios {
+  height: 25rem;
+  background-color: #f2f5f8;
+  color: #004680;
+}
+
+.card-servicios .card-subtitle {
+  font-size: 3rem;
+}
+
+.card-servicios .card-text {
+  font-size: 1.8rem;
+  padding: 2rem;
+}
+
+/*Footer*/
+
+footer {
+  height: 20rem;
+  background-color: var(--color_principal);
+}
+
+footer .container {
+  width: 100%;
+  height: 100%;
+}
+footer .row {
+  height: 50%;
+}
+
+footer .row .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .icono-footer {
+  color: white;
+  font-size: 3rem;
+}
+
+footer h6 {
+  color: white;
+  font-size: 2rem;
+}
+
+@media (min-width: 1062px) {
+  footer {
+    height: 15rem;
+  }
+
+  footer .icono-footer {
+    color: white;
+    font-size: 2rem;
+  }
+
+  footer h6 {
+    font-size: 1.5rem;
+  }
+}
