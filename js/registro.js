@@ -1,10 +1,10 @@
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 class Usuario {
-  constructor(nombre, email, contraseña, rol = "usuario") {
+  constructor(nombre, email, password, rol = "usuario") {
     this.nombre = nombre;
     this.email = email;
-    this.contraseña = contraseña;
+    this.password = password;
     this.rol = rol;
   }
 }
@@ -20,7 +20,7 @@ const handleSubmit = (e) => {
 
 const registroUsuario = () => {
   let nombre = document.getElementById("text-nombre").value;
-  let correo = document.getElementById("text-email").value;
+  let email = document.getElementById("text-email").value;
   let password = document.getElementById("text-password").value;
   let password2 = document.getElementById("text-password2").value;
 
@@ -29,7 +29,7 @@ const registroUsuario = () => {
   }
 
   let validar = usuarios.find((user) => {
-    return user.email === correo;
+    return user.email === email;
   });
 
   if (validar) {
@@ -38,7 +38,7 @@ const registroUsuario = () => {
     );
   }
 
-  usuarios.push(new Usuario(nombre, correo, password));
+  usuarios.push(new Usuario(nombre, email, password));
 
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
