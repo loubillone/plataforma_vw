@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+/*Menú*/
+.navbar {
+  background-color: var(--color_principal);
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+.navbar .nav-item {
+  margin-left: 6rem;
+}
+
+.navbar-brand img {
+  width: 10%;
+}

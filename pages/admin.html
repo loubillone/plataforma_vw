@@ -9,9 +9,9 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/login.css" />
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="icon" href="../assets/img/Volkswagen_logo_2019.svg.png" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="icon" href="../assets/img/logo-vw-blanco.png" />
     <title>Volkswagen Plataforma || Administrador</title>
   </head>
 
@@ -21,7 +21,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
-            ><img src="assets/img/logo-vw-blanco.png" alt=""
+            ><img src="../assets/img/logo-vw-blanco.png" alt="logo vw"
           /></a>
           <button
             class="navbar-toggler"
@@ -65,8 +65,136 @@
       </nav>
     </header>
 
+    <main>
+      <div class="container">
+        <div class="row my-3">
+          <div class="col">
+            <h2>Panel de administrador</h2>
+          </div>
+        </div>
+      </div>
+
+      <!--Card de carga de vehículos-->
+
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-8 offset-2 col-md-4 offset-md-4">
+            <div class="card">
+              <img
+                src="https://assets.volkswagen.com/is/image/volkswagenag/HEADER-HOME_VERANO?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmM2E1Nw=="
+                class="card-img-top"
+                alt="imagen administrador"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Formulario de carga</h5>
+                <form action="" id="formulario">
+                  <label for="">Nombre del vehículo</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="text-nombre"
+                    class="form-control"
+                  />
+
+                  <label for="">Modelo</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="text-modelo"
+                    class="form-control"
+                  />
+                  <br />
+                  <label>Año de fabricación</label>
+                  <br />
+                  <select name="" id="anio" class="form-control" required>
+                    <option value="">Elige el año de fab</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                  </select>
+                  <br />
+
+                  <label>Estado</label>
+                  <br />
+                  <select name="" id="estado" class="form-control" required>
+                    <option value="">Elige estado</option>
+                    <option value="Nuevo">Nuevo</option>
+                    <option value="Usado">Usado</option>
+                  </select>
+                  <br />
+                  <br />
+                  <label for="">Imagen</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="imagen"
+                    class="form-control"
+                    placeholder="Inserte url de la imagen"
+                  />
+
+                  <label for="">Precio</label>
+                  <input
+                    type="number"
+                    name=""
+                    id="precio"
+                    class="form-control"
+                  />
+                  <br />
+                  <button class="btn btn-primary float-end">Cargar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Tabla de vehículos-->
+
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Modelo</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                  <td>@mdo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <!--Javascript-->
-    <script src="./js/login.js"></script>
+    <script src="../js/admin.js"></script>
     <!--bootstrap-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
