@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <!--Card de carga de vehículos-->
+      <!--Formulario de carga de vehículos-->
 
       <div class="container">
         <div class="row mt-5">
@@ -99,21 +99,39 @@
                   <input
                     type="text"
                     name=""
-                    id="text-nombre"
+                    id="nombre"
                     class="form-control"
+                    required
                   />
 
                   <label for="">Modelo</label>
                   <input
                     type="text"
                     name=""
-                    id="text-modelo"
+                    id="modelo"
                     class="form-control"
+                    required
                   />
+
+                  <br />
+                  <select name="" id="color" class="form-control" required>
+                    <option value="">Elige el color</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="plata sirius">Plata sirius</option>
+                    <option value="negro">Negro</option>
+                    <option value="azul noche">Azul noche</option>
+                    <option value="blanco">Blanco</option>
+                  </select>
+
                   <br />
                   <label>Año de fabricación</label>
                   <br />
-                  <select name="" id="anio" class="form-control" required>
+                  <select
+                    name=""
+                    id="fabricacion"
+                    class="form-control"
+                    required
+                  >
                     <option value="">Elige el año de fab</option>
                     <option value="2024">2024</option>
                     <option value="2023">2023</option>
@@ -130,7 +148,7 @@
                     <option value="Nuevo">Nuevo</option>
                     <option value="Usado">Usado</option>
                   </select>
-                  <br />
+
                   <br />
                   <label for="">Imagen</label>
                   <input
@@ -147,6 +165,7 @@
                     name=""
                     id="precio"
                     class="form-control"
+                    required
                   />
                   <br />
                   <button class="btn btn-primary float-end">Cargar</button>
@@ -165,7 +184,7 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">Id</th>
                   <th scope="col">Nombre</th>
                   <th scope="col">Modelo</th>
                   <th scope="col">Estado</th>
