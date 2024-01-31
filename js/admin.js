@@ -12,6 +12,8 @@ class Vehiculos {
 }
 
 let vehiculos = JSON.parse(localStorage.getItem("vehiculos")) || [];
+let tableBody = document.getElementById("table-body");
+
 const handleSubmit = (e) => {
   e.preventDefault();
 
@@ -44,6 +46,26 @@ const agregarVehiculo = () => {
   localStorage.setItem("vehiculos", JSON.stringify(vehiculos));
   document.getElementById("formulario").reset();
   document.getElementById("nombre").focus();
+
+  mostrarTabla();
+};
+
+const mostrarTabla = () => {
+  tableBody.innerHTML = "";
+
+  vehiculos.map((vehiculo, index) => {
+    let tr = document.createElement("tr");
+    let celda = `<th scope="row">${index + 1}</th>
+    <td>${vehiculo.nombre}</td>
+    <td>${vehiculo.modelo}</td>
+    <td>${vehiculo.color}</td>
+    <td>${vehiculo.precio}</td>`;
+
+    tr.innerHTML = celda;
+    tableBody.appendChild(tr);
+  });
 };
 
 document.getElementById("formulario").addEventListener("submit", handleSubmit);
+
+mostrarTabla();
