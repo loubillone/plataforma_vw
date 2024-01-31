@@ -50,19 +50,19 @@ html {
   padding: 2rem;
 }
 
-section .card-principal {
-  height: 42rem;
+.card-principal {
   box-shadow: 13px 6px 15px 3px rgba(4, 20, 76, 0.41);
   border-radius: 2rem;
   padding: 2rem;
 }
 
-section .card img {
+.card img {
+  height: 200px;
   object-fit: cover;
 }
 
-section .card .btn-card {
-  font-size: 1.8rem;
+.card .btn-card {
+  font-size: 1.6rem;
   border-radius: 5rem;
   background-color: var(--color_principal);
   border: none;
