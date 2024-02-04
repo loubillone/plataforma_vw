@@ -16,17 +16,18 @@ let tableBody = document.getElementById("table-body");
 
 //------------MODAL----------------
 //Para usar el modal
+
 let myModal = new bootstrap.Modal(document.getElementById("myModal"));
 
 //Mostrar modal
 
 const editModal = (index) => {
   console.log(index);
-  myModal.show();
+  // myModal.show();
   crearCuerpoModal(index);
 };
 
-const crearCuerpoModal = () => {
+const crearCuerpoModal = (index) => {
   document.querySelector(".modal-body").innerHTML = "";
 
   let bodyModal = document.querySelector(".modal-body");
@@ -70,7 +71,7 @@ const crearCuerpoModal = () => {
                     class="form-control"
                     required
                   >
-                    <option value="${vehiculos[index].fabricacion}">${vehiculos[index].color}</option>
+                    <option value="${vehiculos[index].fabricacion}">${vehiculos[index].fabricacion}</option>
                     <option value="2024">2024</option>
                     <option value="2023">2023</option>
                     <option value="2022">2022</option>
