@@ -13,8 +13,62 @@ class Vehiculos {
 
 let vehiculos = JSON.parse(localStorage.getItem("vehiculos")) || [];
 let tableBody = document.getElementById("table-body");
+let formMenu = document.getElementById("formulario-menu");
+let usuario = JSON.parse(localStorage.getItem("login") || null);
+
+//Validar rol admin para que directamente no muestre la opción del formulario de carga
+
+const validarUsuario = () => {
+  if (usuario) {
+    if (usuario.rol !== "admin") {
+      document.querySelector("main").innerHTML = "";
+      let div = document.createElement("div");
+      div.classList = "container";
+      let estructura = `<div class="row mt-5">
+        <div class="col">
+          <div class="alert alert-danger" role="alert">
+            No tiene permisos para ver esta página
+          </div>
+  
+          <div>
+          <a href="../pages/home.html">Volver</a>
+        </div>
+        
+      </div>`;
+      div.innerHTML = estructura;
+
+      document.querySelector("main").appendChild(div);
+    } else {
+      mostrarTabla();
+    }
+  } else {
+    location.replace("../index.html");
+  }
+};
+//CERRAR SESIÓN
+
+if (usuario.rol === "admin" || usuario.rol === "usuario") {
+  let boton = document.createElement("button");
+  boton.classList = `btn btn-success mx-2`;
+  boton.type = "button";
+  boton.id = "boton-sesion";
+  let cuerpoBoton = `<i class="fa fa-sign-out" aria-hidden="true"></i>`;
+  boton.innerHTML = cuerpoBoton;
+  formMenu.appendChild(boton);
+}
+
+const cerrarSesion = () => {
+  let validar = confirm(`Hola ${usuario.nombre}, quieres cerrar sesión?`);
+
+  if (validar) {
+    localStorage.removeItem("login");
+    alert("Cerraste sesión");
+    location.replace("../index.html");
+  }
+};
 
 //------------MODAL----------------
+
 //Para usar el modal
 
 let myModal = new bootstrap.Modal(document.getElementById("myModal"));
@@ -197,6 +251,10 @@ const mostrarTabla = () => {
   });
 };
 
+//ENVÍO DE FORMULARIO
 document.getElementById("formulario").addEventListener("submit", handleSubmit);
 
-mostrarTabla();
+//CLICK EN ÍCONO DE CERRAR SESIÓN
+document.getElementById("boton-sesion").addEventListener("click", cerrarSesion);
+
+validarUsuario();
