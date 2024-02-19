@@ -44,9 +44,19 @@ const registroUsuario = () => {
 
   document.getElementById("formulario").reset();
 
-  alert("Usuario registrado con éxito");
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Usuario registrado con éxito",
+    showConfirmButton: false,
+    timer: 2000,
+  });
 
-  location.replace("../index.html");
+  //
+
+  setTimeout(() => {
+    location.replace("../index.html");
+  }, 2500);
 };
 
 document.getElementById("formulario").addEventListener("submit", handleSubmit);
