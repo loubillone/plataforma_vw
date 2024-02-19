@@ -21,3 +21,49 @@ html {
 .navbar-brand img {
   width: 10%;
 }
+
+/*Footer*/
+
+footer {
+  height: 10rem;
+  background-color: var(--color_principal);
+}
+
+footer .container {
+  width: 100%;
+  height: 100%;
+}
+footer .row {
+  height: 50%;
+}
+
+footer .row .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .icono-footer {
+  color: white;
+  font-size: 2rem;
+}
+
+footer h6 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1062px) {
+  footer {
+    height: 15rem;
+  }
+
+  footer .icono-footer {
+    color: white;
+    font-size: 3rem;
+  }
+
+  footer h6 {
+    font-size: 1.8rem;
+  }
+}

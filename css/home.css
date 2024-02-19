@@ -96,7 +96,7 @@ html {
 /*Footer*/
 
 footer {
-  height: 20rem;
+  height: 10rem;
   background-color: var(--color_principal);
 }
 
@@ -116,12 +116,12 @@ footer .row .col {
 
 footer .icono-footer {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 footer h6 {
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 1062px) {
@@ -131,10 +131,10 @@ footer h6 {
 
   footer .icono-footer {
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   footer h6 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
